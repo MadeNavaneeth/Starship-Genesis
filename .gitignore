@@ -1,0 +1,87 @@
+# ============================================
+# Starship-Genesis - Unity project
+# Unity-generated, machine-specific, or secret paths.
+# Everything in Assets/ and ProjectSettings/ IS tracked,
+# including *.meta files (they carry asset GUIDs).
+# ============================================
+
+# ---- Unity-generated folders ----
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Generated asset metadata (the indexes, not the assets)
+/[Aa]ssets/[Aa]ssetStore/
+/[Aa]ssets/SourceAssetDB*/
+
+# ---- Generated IDE project files ----
+# Unity regenerates these on load and they embed absolute
+# machine paths, which leak the author's folder layout.
+/[Aa]ssembly-*.csproj
+/*.csproj
+/*.sln
+/*.unityproj
+/*.pidb
+/*.booproj
+*.svd
+*.user
+*.userprefs
+*.opendb
+*.VC.db
+*.stackdump
+sysinfo.txt
+
+# ---- Build output ----
+*.apk
+*.aab
+*.unitypackage
+*.app
+crashlytics-build.properties
+proguard-project.txt
+
+# ---- IDEs ----
+.vs/
+.idea/
+_ReSharper*/
+*.DotSettings.user
+*.swp
+
+# .vscode: keep the shared config, drop local state
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+.vsconfig
+
+# ---- OS noise ----
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+ehthumbs.db
+*.lnk
+
+# ---- Secrets: never commit ----
+*.keystore
+!debug.keystore
+*.jks
+*.p12
+*.pfx
+*.mobileprovision
+*.cer
+*.der
+*.pem
+*.pkcs12
+*.p8
+*.key
+*.pyth
+*.secret
+.env
+.env.*
+secrets.env
