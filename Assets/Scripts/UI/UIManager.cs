@@ -108,12 +108,16 @@ public class UIManager : MonoBehaviour
             {
                 SetActiveAllPages(false);
                 Time.timeScale = 1;
+                AudioListener.pause = false;
                 isPaused = false;
             }
             else
             {
                 GoToPage(pausePageIndex);
                 Time.timeScale = 0;
+                // timeScale alone does not stop AudioSources, so music kept
+                // playing over the pause screen.
+                AudioListener.pause = true;
                 isPaused = true;
             }
         }      

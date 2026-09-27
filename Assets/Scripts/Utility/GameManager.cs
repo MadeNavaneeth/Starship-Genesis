@@ -78,7 +78,10 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            DestroyImmediate(this);
+            // Destroy, not DestroyImmediate: this runs in play mode, where
+            // DestroyImmediate is not allowed on a component and can destroy
+            // assets that are still in use.
+            Destroy(this);
         }
 
         if ((player == null) && (FindObjectOfType<Controller>() != null))
@@ -313,7 +316,12 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("score", score);
         if (UIManager.instance != null)
         {
-            player.SetActive(false);
+            // Guard: player is legitimately null in non-playable scenes, and
+            // a victory page must never depend on it existing.
+            if (player != null)
+            {
+                player.SetActive(false);
+            }
             UIManager.instance.allowPause = false;
             UIManager.instance.GoToPage(gameVictoryPageIndex);
             if (victoryEffect != null)

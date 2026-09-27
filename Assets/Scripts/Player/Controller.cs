@@ -199,7 +199,6 @@ public class Controller : MonoBehaviour
 
             // Move the player using physics
             Vector2 force = transform.up * movement.y * Time.deltaTime * moveSpeed;
-            Debug.Log(force);
             myRigidbody.AddForce(force);
 
             // Rotate the player around the z axis
